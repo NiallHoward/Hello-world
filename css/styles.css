@@ -1,5 +1,6 @@
 
-body { margin:0px; padding:0px;	background: #68B0AB; }
+html { margin:0px; padding:0px; height: 101%; }
+body { margin:0px; padding:0px;	background: #f2f2f2f2; height: 101%; position: relative;}
 
 @font-face { font-family: "Poppins-Regular"; src: url("Fonts/Poppins-Regular.ttf");}
 @font-face { font-family: "Poppins-Medium"; src: url("Fonts/Poppins-Medium.ttf");}
@@ -7,9 +8,49 @@ body { margin:0px; padding:0px;	background: #68B0AB; }
 
 h1, h2, h3, h4 {margin: 0; padding: 0 0 10px 0; font-family: "Poppins-Medium"; color: white; }
 input, textarea { font-family: "Poppins-Regular"; }
+img { width: 100%; }
 p {margin: 0; padding: 0 0 10px 0; font-family: "Poppins-Regular";}
 .clear {clear: both;}
+p.smalltext { font-size: 80%; }
 
 
+.side { float: left; display: block; width: 25%; background: #333333; z-index: 20; height: 100%; box-sizing: border-box; padding: 20px 40px; position: fixed;}
+.side .me { text-align: center; width: 70%; margin: 0 auto 20px auto; }
+.side .me img { border-radius: 50%; width: 100%; margin: 0 auto; max-width: 300px; }
+.side p { color: #fff; padding: 0; }
+.side p.email { position: relative; padding: 0 0 10px 0; }
+.side p.email img { top: 8px; position: absolute; width:10px; height: 10px; left: -15px; }
 
+.side .links { width: 102%; margin-left: -2%; }
+.side p.link { float: left; font-size: 150%; width: 23%; margin: 0 0 1% 2%;}
+.side p.link a { color: #fff; }
+.side p.link a:hover { opacity: 0.5; }
+.side p.quote { padding: 10px 0; font-size: 85%; }
+.side p.fact {padding: 0 0 10px 0; font-size: 85%; }
+.side p.blockbutton { padding: 0; text-align: center; text-decoration: none;}
+.side p.blockbutton a { padding: 8px 12px; display: block; color: #333333; background: #ffffff; font-size: 85%; text-transform: uppercase; font-weight: 700; cursor: pointer; text-decoration: none; }
+.side .logo { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);  width: 30%;}
+.side .logo:hover{ opacity: 0.5; }
+
+.main { padding-left: 25%; display: block; width: 100%; background: #ffffff; height: 100%; box-sizing: border-box; } 
+.main .header { width: 100%; height: 225px; background: url(Images/6.jpg) no-repeat center center; background-size: cover; display: block; position: relative;}
+.main .header .overlay {width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.5); position: absolute;}
+.main .header .overlay .datetime { position: absolute; top: 50%; transform: translateY(-50%); left: 40px; font-size: 150%;}
+.main .header .overlay .datetime p {color: #fff;}
+
+.main .inner { box-sizing: border-box; padding: 40px; }
+
+@media only screen and (max-width: 1180px) {
+	.side p.email { word-break: break-word; }
+}
+@media only screen and (max-width: 850px) {
+	.side { width: 33.3333%; }
+	.main { padding-left: 33.3333%; }
+	
+}
+@media only screen and (max-width: 667px) {
+	.side { float: none; width: 100%; position: relative; }
+	.main { float: none; width: 100%; padding: 0; }
+
+}
 
