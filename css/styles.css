@@ -1,6 +1,6 @@
 
 html { margin:0px; padding:0px; height: 101%; }
-body { margin:0px; padding:0px;	background: #f2f2f2f2; height: 101%; position: relative;}
+body { margin:0px; padding:0px; height: 101%; position: relative; background: #f2f2f2;}
 
 @font-face { font-family: "Poppins-Regular"; src: url("Fonts/Poppins-Regular.ttf");}
 @font-face { font-family: "Poppins-Medium"; src: url("Fonts/Poppins-Medium.ttf");}
@@ -32,7 +32,7 @@ p.smalltext { font-size: 80%; }
 .side .logo { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);  width: 30%;}
 .side .logo:hover{ opacity: 0.5; }
 
-.main { padding-left: 25%; display: block; width: 100%; background: #ffffff; height: 100%; box-sizing: border-box; } 
+.main { padding-left: 25%; display: block; width: 100%; height: 100%; box-sizing: border-box; } 
 .main .header { width: 100%; height: 190px; background: url(Images/6.jpg) no-repeat center center; background-size: cover; display: block; position: relative;}
 .main .header .overlay {width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.5); position: absolute;}
 .main .header .overlay .datetime { position: absolute; top: 50%; transform: translateY(-50%); left: 40px;}
@@ -42,6 +42,25 @@ p.smalltext { font-size: 80%; }
 .main .header .overlay .weather p { color: #fff; font-size: 150%;}
 
 .main .inner { box-sizing: border-box; padding: 40px; }
+
+.main .inner .search {width: 100%; margin: 0 0 20px 0; position: relative;}
+.main .inner .search input[type=text] { box-sizing: border-box; padding: 12px; border: none; width: 100%; background: #ccc; border: none; outline:none;}
+.main .inner .search button { padding: 15px; background: #333; border: none; cursor: pointer; color: #fff; position: absolute; top: 0; right: 0; height: 100%; }
+.main .inner .search input:focus {border: none; outline: none;}
+/*.main .inner .search button:hover { background: #ccc;}*/
+
+.main .inner .boxes { width: 101%; margin-left: -1%; }
+.main .inner .boxes .box { width: 24%; height: 150px; margin: 0 0 20px 1%; float: left;}
+
+.main .inner .boxes .box.short {height: 150px;}
+.main .inner .boxes .box.medium {height: 300px;}
+.main .inner .boxes .box.long {height: 450px;}
+
+.main .inner .boxes .box.yellow { background-color: yellow; }
+.main .inner .boxes .box.red { background-color: red; }
+.main .inner .boxes .box.green { background-color: green; }
+.main .inner .boxes .box.blue { background-color: blue; }
+
 
 @media only screen and (max-width: 1180px) {
 	.side p.email { word-break: break-word; }
