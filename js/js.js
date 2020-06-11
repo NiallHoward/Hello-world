@@ -9,34 +9,46 @@ $(document).ready(function(){
 		.then(response => response.json())
 		.then(function(data) {
 			
-			if (data.list[0].weather[0].main = "Rain"){
-				document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-cloud-showers-heavy\"></i>";
-			} 
-			else if( data.list[0].weather[0].main = "Drizzle"){
-				document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-cloud-rain\"></i>";
-			} 
-			else if (data.list[0].weather[0].main = "Thunderstorm" ){
-				document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-bolt\"></i>";
-			}
-			else if (data.list[0].weather[0].main = "Snow" ){
-				document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-snowflake\"></i>";
-			}
-			else if (data.list[0].weather[0].main = "Clear" ){
-				document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-sun\"></i>";
-			}
-			else if (data.list[0].weather[0].main = "Clouds" ){
-				document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-cloud\"></i>";
-			}
-			else {
+		if (data.list[0].weather[0].main = "Rain"){
+			document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-cloud-showers-heavy\"></i>";
+		} 
+		else if( data.list[0].weather[0].main = "Drizzle"){
+			document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-cloud-rain\"></i>";
+		} 
+		else if (data.list[0].weather[0].main = "Thunderstorm" ){
+			document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-bolt\"></i>";
+		}
+		else if (data.list[0].weather[0].main = "Snow" ){
+			document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-snowflake\"></i>";
+		}
+		else if (data.list[0].weather[0].main = "Clear" ){
+			document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-sun\"></i>";
+		}
+		else if (data.list[0].weather[0].main = "Clouds" ){
+			document.getElementById("tempicon").innerHTML = "<i class=\"fas fa-cloud\"></i>";
+		}
+		else {
 
-			}
+		}
 
-			var desc = data.list[0].weather[0].description;
-			var cel = data.list[0].main.temp;
-			var celround = cel - 273.15;
+		var desc = data.list[0].weather[0].description;
+		var cel = data.list[0].main.temp;
+		var celround = cel - 273.15;
   			
-  			document.getElementById("temp").innerHTML = desc + " " + Math.round(celround) + " &#8451;";
+  		document.getElementById("temp").innerHTML = desc + " " + Math.round(celround) + " &#8451;";
     });
+
+
+	$('.gallery').slick({
+		dots: true,
+		arrows: false,
+		infinite: true,
+		fade: true,
+		autoplay: true,
+  		autoplaySpeed: 1500,
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
+	});
 		
 });
 

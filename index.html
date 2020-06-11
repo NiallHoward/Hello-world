@@ -13,6 +13,7 @@
 	<script language="JavaScript" type="text/javascript" src="js/quotes.js"></script>
 	<script language="JavaScript" type="text/javascript" src="js/facts.js"></script>
 	<script language="JavaScript" type="text/javascript" src="js/boxes.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/news.js"></script>
 
 
 	<script language="JavaScript" type="text/javascript" src="js/js.js"></script>
@@ -66,57 +67,58 @@
 		</div>
 		<div class="inner">
 			<div class="search">
-				<input type="text" placeholder="Search..">
-				<button type="submit"><i class="fa fa-search"></i></button>
+				<form action="https://www.google.com/search" method="GET" target="_blank">
+					<input type="text" name="q" placeholder="Google search..">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
 			</div>
 			
 			<div class="boxes">
-				<div class="box red short">
-					<div class="overlay">
-							
-					</div>
+				<div class="box grey medium news business">
+					<p class="title">Latest news - <strong>Business</strong> <i class="fas fa-user-tie"></i></p>
+					<div id="businessposts"></div>
+					
 				</div>
-				<div class="box green medium">
-					<div class="overlay">
-							
-					</div>
+				
+				<div class="box green short gallery">
+					<div class="image" style="background: url('css/Images/1.jpg') no-repeat center center; background-size: cover;"></div>
+					<div class="image" style="background: url('css/Images/2.jpg') no-repeat center center; background-size: cover;"></div>
+					<div class="image" style="background: url('css/Images/3.jpg') no-repeat center center; background-size: cover;"></div>
+					<div class="image" style="background: url('css/Images/4.jpg') no-repeat center center; background-size: cover;"></div>
+					<div class="image" style="background: url('css/Images/5.jpg') no-repeat center center; background-size: cover;"></div>
 				</div>
-				<div class="box blue short">
-					<div class="overlay">
-							
-					</div>
+
+				<div class="box blue short"></div>
+
+				<div class="box grey long news sports">
+					<p class="title">Latest news - <strong>Sports</strong> <i class="fas fa-futbol"></i></p>
+					<div id="sportsposts"></div>
 				</div>
-				<div class="box blue long">
-					<div class="overlay">
-							
-					</div>
+
+				<div class="box green medium gallery">
+					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/iplayer.png') no-repeat center center; background-size: cover;"></a>
+					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/4OD.png') no-repeat center center; background-size: cover;"></a>
+					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/itvhub.png') no-repeat center center; background-size: cover;"></a>
+					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/netflix.jpg') no-repeat center center; background-size: cover;"></a>
+					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/dave.jpg') no-repeat center center; background-size: cover;"></a>
 				</div>
-				<div class="box green medium">
-					<div class="overlay">
-							
-					</div>
+				<div class="box yellow short galleryone">
+					<a href="https://fantasy.premierleague.com/my-team" target="_blank" rel="noopener" class="image" style="background: url('css/Images/fpl.png') no-repeat center center; background-size: cover;"></a>
 				</div>
-				<div class="box yellow short">
-					<div class="overlay">
-							
-					</div>
+				
+				<div class="box green medium gallery">
+					<a href="https://www.google.com/search?q=forest+fixtures&oq=forest+fixtures&aqs=chrome..69i57j0l7.2551j0j7&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener" class="image" style="background: url('css/Images/city-ground.jpg') no-repeat center center; background-size: cover;"></a>
+					<a href="https://www.google.com/search?q=forest+fixtures&oq=forest+fixtures&aqs=chrome..69i57j0l7.2551j0j7&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener" class="image" style="background: url('css/Images/Nottingham-Forests-City-Ground.jpg') no-repeat center center; background-size: cover;"></a>
 				</div>
-				<div class="box green medium">
-					<div class="overlay">
-							
-					</div>
+
+				<div class="box grey medium news tech">
+					<p class="title">Latest news - <strong>Technology</strong> <i class="fas fa-robot"></i></p>
+					<div id="techposts"></div>
 				</div>
-				<div class="box blue medium">
-					<div class="overlay">
-							
-					</div>
-				</div>
-				<div class="box red long">
-					<div class="overlay">
-							
-					</div>
-				</div>
+				
+				<div class="box red short"></div>
 			</div>
+			<!-- <a class="twitter-timeline" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 
 		</div>
 	</div>
