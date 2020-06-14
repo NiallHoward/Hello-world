@@ -40,6 +40,7 @@ p.smalltext { font-size: 80%; }
 .main .header .overlay .datetime p {color: #fff; font-size: 150%;}
 .main .header .overlay .weather { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); }
 .main .header .overlay .weather p { color: #fff; font-size: 150%;}
+.main .header .overlay .weather p span#temp { text-transform: capitalize; }
 
 .main .inner { box-sizing: border-box; padding: 40px; }
 
