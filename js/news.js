@@ -34,6 +34,7 @@ $(document).ready(function(){
     			document.getElementById("businessposts").innerHTML += "<div class=\"newspost\"><p><a href=\"" + url + "\" target=\"_blank\" rel=\"noopener\"><strong><span id=\"title\">" + title + "</span></strong></a><br><span id=\"source\">" + source + "</span> &#124; <span id=\"date\">" + formatDate + "</span></p></div>";
     		}
 		}
+		$('#business-loader').addClass('hide');
 	})
      .catch(function(error) {
         // console.log(JSON.stringify(error));
@@ -77,6 +78,7 @@ $(document).ready(function(){
                 document.getElementById("sportsposts").innerHTML += "<div class=\"newspost\"><p><a href=\"" + url + "\" target=\"_blank\" rel=\"noopener\"><strong><span id=\"title\">" + title + "</span></strong></a><br><span id=\"source\">" + source + "</span> &#124; <span id=\"date\">" + formatDate + "</span></p></div>";
             }
         }
+ 		$('#sport-loader').addClass('hide');
     })
 	.catch(function(error) {
         console.log(JSON.stringify(error));
@@ -120,6 +122,7 @@ $(document).ready(function(){
     			document.getElementById("techposts").innerHTML += "<div class=\"newspost\"><p><a href=\"" + url + "\" target=\"_blank\" rel=\"noopener\"><strong><span id=\"title\">" + title + "</span></strong></a><br><span id=\"source\">" + source + "</span> &#124; <span id=\"date\">" + formatDate + "</span></p></div>";
     		}
 		}
+		$('#tech-loader').addClass('hide');
 	})
     .catch(function(error) {
         console.log(JSON.stringify(error));

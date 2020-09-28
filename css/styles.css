@@ -63,9 +63,11 @@ p.smalltext { font-size: 80%; }
 .gallery .slick-dots li.slick-active button {background: rgba(255,255,255,0.6);}
 .gallery .slick-dots li button:focus { outline: none; border: none;}
 
-.main .inner .boxes .news { overflow-y: scroll; }
+.main .inner .boxes .news { padding: 0; overflow-y: scroll; position: relative;}
 .main .inner .boxes .news:hover { opacity: 1; }
-.main .inner .boxes .news .title {font-size: 110%;}
+.main .inner .boxes .news .heading { padding: 10px 20px; box-sizing: border-box; z-index: 10; text-align: center; width: 100%; background: #cccccc; position: absolute; top: 0; left: 0; }
+.main .inner .boxes .news .title {font-size: 110%; padding: 0;}
+.main .inner .boxes .news .inner { padding: 60px 20px 10px 20px; }
 .main .inner .boxes .news p span {font-size: 80%;}
 .main .inner .boxes .newspost {border-bottom: 1px solid #000; margin-bottom: 10px;}
 .main .inner .boxes .newspost p {padding:0 0 10px 0;}
@@ -78,6 +80,33 @@ p.smalltext { font-size: 80%; }
 .main .inner .boxes .news::-webkit-scrollbar-thumb, .main .inner .boxes .twitter::-webkit-scrollbar-thumb{ background: -moz-linear-gradient(184deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 100%);
 background: -webkit-linear-gradient(184deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 100%);
 background: linear-gradient(184deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 100%); }
+
+.loader, .loader:before, .loader:after { border-radius: 50%; width: 2.5em; height: 2.5em; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation: load7 1.8s infinite ease-in-out; animation: load7 1.8s infinite ease-in-out;}
+.loader { color: #333333; font-size: 10px; margin: 80px auto; position: relative; text-indent: -9999em; -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); -webkit-animation-delay: -0.16s; animation-delay: -0.16s;}
+.loader:before, .loader:after { content: ''; position: absolute; top: 0;}
+.loader:before { left: -3.5em; -webkit-animation-delay: -0.32s; animation-delay: -0.32s;}
+.loader:after { left: 3.5em;}
+.loader.hide { display: none; }
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
 
 .main .inner .boxes .box.short {height: 150px;}
 .main .inner .boxes .box.medium {height: 300px;}
