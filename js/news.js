@@ -42,8 +42,6 @@ $(document).ready(function(){
     });   
 
 
-
-
     fetch("https://newscatcher.p.rapidapi.com/v1/latest_headlines?topic=sport&lang=en&country=GB", {
         "method": "GET",
         "headers": {

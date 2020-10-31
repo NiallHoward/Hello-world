@@ -38,7 +38,7 @@
 <body>
 	<div class="side">
 		<div class="me"><img src="css/Images/me2.jpg"/></div>
-		<p>Niall Howard</p>
+		<p class="name"><i class="fas fa-user"></i> Niall Howard</p>
 		<p class="email"><img src="css/Icons/green.png" />nialljhoward@hotmail.com</p>
 		
 		<div class="links">
@@ -80,11 +80,18 @@
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 			</div>
+
+			<div class="filter">
+				<p data-filter=".news"><a>News</a></p>
+				<p data-filter=".bookmark"><a>Bookmarks</a></p>
+				<p data-filter=".twitter"><a>Tweets</a></p>
+			</div>
+			<div class="clear"></div>
 			
 			<div class="boxes">
 				
-				<div class="box short galleryone background">
-					<div class="image" style="background: #333 url('css/Images/logo-white.png') no-repeat center center; background-size: 65%;"></div>
+				<div class="box short bookmark galleryone background">
+					<a href="https://www.chess.com/home" target="_blank" rel="noopener" class="image" style="background: url('css/Images/chess.png') no-repeat center center; background-size: cover;"></a>
 				</div>
 
 				<div class="box medium news business">
@@ -97,7 +104,7 @@
 					</div>
 				</div>
 				
-				<div class="box short galleryone">
+				<div class="box short bookmark galleryone">
 					<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1591977083&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d6f66c1a0-82b6-2253-771b-a9be6385a193&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015" target="_blank" rel="noopener" class="image" style="background: url('css/Images/hotmail.png') no-repeat center center; background-size: cover;"></a>
 				</div>
 
@@ -111,25 +118,32 @@
 					</div>
 				</div>
 
-				<div class="box short galleryone">
-					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/iplayer.png') no-repeat center center; background-size: cover;"></a>
+				<div class="box short bookmark galleryone">
+					<a href="https://www.bbc.co.uk/iplayer" target="_blank" rel="noopener" class="image" style="background: url('css/Images/iplayer.png') no-repeat center center; background-size: cover;"></a>
 				</div>
 		
-				<div class="box short galleryone">
+				<div class="box short bookmark galleryone">
 					<a href="https://fantasy.premierleague.com/my-team" target="_blank" rel="noopener" class="image" style="background: url('css/Images/fpl.png') no-repeat center center; background-size: cover;"></a>
 				</div>
 
-				<div class="box medium twitter">
-					<p class="title"><strong>Bob updates <i class="fab fa-twitter"></i></strong></p>
-					<a class="twitter-timeline" href="https://twitter.com/RealBobMortimer" data-chrome="nofooter noscrollbar noborders noheader transparent" data-height="300" data-tweet-limit="3">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					<!-- <a class="twitter-timeline" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" data-chrome="nofooter noborders noheader transparent" data-height="300" data-tweet-limit="3">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+				<div class="box short bookmark galleryone">
+					<a href="https://www.twitch.tv/" target="_blank" rel="noopener" class="image" style="background: url('css/Images/twitch-logo.jpg') no-repeat center center; background-size: cover;"></a>
 				</div>
 
-				<div class="box short galleryone">
-					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/4OD.png') no-repeat center center; background-size: cover;"></a>
+				<div class="box medium twitter">
+					<div class="heading">
+						<p class="title"><strong>Bob updates <i class="fab fa-twitter"></i></strong></p>
+					</div>
+					<div class="inner">
+						<a class="twitter-timeline" href="https://twitter.com/RealBobMortimer" data-chrome="nofooter noscrollbar noborders noheader transparent" data-height="300" data-tweet-limit="3">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>
+
+				<div class="box short bookmark galleryone">
+					<a href="https://www.channel4.com/" target="_blank" rel="noopener" class="image" style="background: url('css/Images/4OD.png') no-repeat center center; background-size: cover;"></a>
 				</div>
 				
-				<div class="box green short galleryone">
+				<div class="box green short bookmark galleryone">
 					<a href="https://www.google.com/search?q=forest+fixtures&oq=forest+fixtures&aqs=chrome..69i57j0l7.2551j0j7&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener" class="image" style="background: url('css/Images/Nottingham-Forests-City-Ground.jpg') no-repeat center center; background-size: cover;"></a>
 				</div>
 
@@ -144,21 +158,24 @@
 				</div>
 
 				<div class="box medium twitter">
-					<p class="title"><strong>Elon updates <i class="fab fa-twitter"></i></strong></p>
-					<a class="twitter-timeline" href="https://twitter.com/elonmusk" data-chrome="nofooter noscrollbar noborders noheader transparent" data-height="300" data-tweet-limit="3">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					<!-- <a class="twitter-timeline" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" data-chrome="nofooter noborders noheader transparent" data-height="300" data-tweet-limit="3">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+					<div class="heading">
+						<p class="title"><strong>Elon updates <i class="fab fa-twitter"></i></strong></p>
+					</div>
+					<div class="inner">
+						<a class="twitter-timeline" href="https://twitter.com/elonmusk" data-chrome="nofooter noscrollbar noborders noheader transparent" data-height="300" data-tweet-limit="3">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
 				</div>
 
-				<div class="box short galleryone">
-					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/itvhub.png') no-repeat center center; background-size: cover;"></a>
+				<div class="box short bookmark galleryone">
+					<a href="https://www.itv.com/" target="_blank" rel="noopener" class="image" style="background: url('css/Images/itvhub.png') no-repeat center center; background-size: cover;"></a>
 				</div>
 
-				<div class="box short galleryone">
-					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/netflix.jpg') no-repeat center center; background-size: cover;"></a>
+				<div class="box bookmark short galleryone">
+					<a href="https://www.netflix.com/gb/" target="_blank" rel="noopener" class="image" style="background: url('css/Images/netflix.jpg') no-repeat center center; background-size: cover;"></a>
 				</div>
 
-				<div class="box short galleryone">
-					<a href="#" target="_blank" rel="noopener" class="image" style="background: url('css/Images/dave.jpg') no-repeat center center; background-size: cover;"></a>
+				<div class="box short bookmark galleryone">
+					<a href="https://uktvplay.uktv.co.uk/" target="_blank" rel="noopener" class="image" style="background: url('css/Images/dave.jpg') no-repeat center center; background-size: cover;"></a>
 				</div>
 
 				
@@ -168,40 +185,6 @@
 				<div class="close"></div>
 			</div>
 			
-			
-				
-<!-- 			<div class="clipboard">
-
-				<h2>Clipboard</h2>
-				
-				<div class="slides">
-					<div class="heading">
-						<p><i class="fas fa-copy"></i> Test</p>
-					</div>
-					<div class="text">
-						<p>Test</p>
-					</div>
-				</div>
-
-				<div class="slides">
-					<div class="heading">
-						<p><i class="fas fa-copy"></i> Test</p>
-					</div>
-					<div class="text">
-						<p>Test</p>
-					</div>
-				</div>
-
-				<div class="slides">
-					<div class="heading">
-						<p><i class="fas fa-copy"></i> Test</p>
-					</div>
-					<div class="text">
-						<p>Test</p>
-					</div>
-				</div>
-			</div> -->
-
 		</div>
 	</div>
 	

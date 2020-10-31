@@ -19,8 +19,10 @@ p.smalltext { font-size: 80%; }
 .side .me { text-align: center; width: 70%; margin: 0 auto 20px auto; }
 .side .me img { border-radius: 50%; width: 100%; margin: 0 auto; max-width: 300px; }
 .side p { color: #fff; padding: 0; }
+.side p.name { position: relative; }
+.side p.name i { position: absolute; top: 50%; left: -20px; transform: translateY(-50%); font-size: 90%; }
 .side p.email { position: relative; padding: 0 0 10px 0; }
-.side p.email img { top: 8px; position: absolute; width:10px; height: 10px; left: -15px; }
+.side p.email img { top: 8px; position: absolute; width:10px; height: 10px; left: -20px; }
 
 .side .links { width: 102%; margin-left: -2%; }
 .side p.link { float: left; font-size: 150%; width: 23%; margin: 0 0 1% 2%;}
@@ -49,6 +51,11 @@ p.smalltext { font-size: 80%; }
 .main .inner .search button { padding: 15px; background: #333; border: none; cursor: pointer; color: #fff; position: absolute; top: 0; right: 0; height: 100%; }
 .main .inner .search input:focus {border: none; outline: none;}
 
+.main .inner .filter {width: 102%; margin-left: -2%;}
+.main .inner .filter p { width: 31.33333%; float: left; margin: 0 0 2% 2%; padding: 0; text-align: center; background: #333333; }
+.main .inner .filter p a { display: block; padding: 10px 0px; color: #ffffff; cursor: pointer; }
+.main .inner .filter p.active, .main .inner .filter p:hover  { opacity: 0.7; }
+
 .main .inner .boxes { width: 101%; margin-left: -1%; margin-bottom: 80px; }
 .main .inner .boxes .box { width: 24%; height: 150px; margin: 0 0 10px 1%; float: left; position: relative; padding: 20px; box-sizing: border-box; background: #f2f2f2;}
 .main .inner .boxes .box:hover {opacity: 0.7;}
@@ -66,14 +73,17 @@ p.smalltext { font-size: 80%; }
 .main .inner .boxes .news { padding: 0; overflow-y: scroll; position: relative;}
 .main .inner .boxes .news:hover { opacity: 1; }
 .main .inner .boxes .news .heading { padding: 10px 20px; box-sizing: border-box; z-index: 10; text-align: center; width: 100%; background: #cccccc; position: absolute; top: 0; left: 0; }
-.main .inner .boxes .news .title {font-size: 110%; padding: 0;}
+.main .inner .boxes .news .title {font-size: 100%; padding: 0;}
 .main .inner .boxes .news .inner { padding: 60px 20px 10px 20px; }
 .main .inner .boxes .news p span {font-size: 80%;}
 .main .inner .boxes .newspost {border-bottom: 1px solid #000; margin-bottom: 10px;}
-.main .inner .boxes .newspost p {padding:0 0 10px 0;}
+.main .inner .boxes .newspost p {padding:0 0 10px 0; font-size: 90%;}
 
-.main .inner .boxes .twitter { overflow-y: scroll; }
+.main .inner .boxes .twitter { padding: 0; overflow-y: scroll; }
 .main .inner .boxes .twitter:hover { opacity: 1; }
+.main .inner .boxes .twitter .heading { padding: 10px 20px; text-align: center; background: #1DA1F2; }
+.main .inner .boxes .twitter .heading p.title { padding: 0; color: #ffffff; }
+.main .inner .boxes .twitter .inner {padding: 10px 20px; }
 
 .main .inner .boxes .news::-webkit-scrollbar-track, .main .inner .boxes .twitter::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; }
 .main .inner .boxes .news::-webkit-scrollbar, .main .inner .boxes .twitter::-webkit-scrollbar{ width: 10px;background-color: #F5F5F5; }
@@ -148,7 +158,8 @@ background: linear-gradient(184deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 100%);
 	.main .inner .boxes .box {width: 48%;}
 }
 @media only screen and (max-width: 667px) {
-	.side { float: none; width: 100%; position: relative; }
+	.side { float: none; width: 100%; position: relative; height: auto;}
+  .side .logo { position: relative; top: auto; left: auto; transform: none; bottom: auto; margin: 0 auto; }
 	.main { float: none; width: 100%; padding: 0; }
 }
 @media only screen and (max-width: 425px) {
