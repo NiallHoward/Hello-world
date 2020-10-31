@@ -72,8 +72,8 @@ p.smalltext { font-size: 80%; }
 
 .main .inner .boxes .news { padding: 0; overflow-y: scroll; position: relative;}
 .main .inner .boxes .news:hover { opacity: 1; }
-.main .inner .boxes .news .heading { padding: 10px 20px; box-sizing: border-box; z-index: 10; text-align: center; width: 100%; background: #cccccc; position: absolute; top: 0; left: 0; }
-.main .inner .boxes .news .title {font-size: 100%; padding: 0;}
+.main .inner .boxes .news .heading { padding: 10px 20px; box-sizing: border-box; z-index: 10; text-align: center; width: 100%; background: #333333; position: absolute; top: 0; left: 0; }
+.main .inner .boxes .news .title {font-size: 100%; padding: 0; color: #ffffff;}
 .main .inner .boxes .news .inner { padding: 60px 20px 10px 20px; }
 .main .inner .boxes .news p span {font-size: 80%;}
 .main .inner .boxes .newspost {border-bottom: 1px solid #000; margin-bottom: 10px;}
