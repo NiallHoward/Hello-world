@@ -155,12 +155,15 @@ background: linear-gradient(184deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 100%);
 @media only screen and (max-width: 850px) {
 	.side { width: 33.3333%; }
 	.main { padding-left: 33.3333%; }
-	.main .inner .boxes .box {width: 48%;}
+	.main .inner .boxes .box {width: 49%;}
 }
 @media only screen and (max-width: 667px) {
 	.side { float: none; width: 100%; position: relative; height: auto;}
   .side .logo { position: relative; top: auto; left: auto; transform: none; bottom: auto; margin: 0 auto; }
 	.main { float: none; width: 100%; padding: 0; }
+
+  .main .inner .filter {  }
+  .main .inner .filter p {width: 48%;}
 }
 @media only screen and (max-width: 425px) {
 	.main .inner .boxes .box { width: 100%; margin-left: 0; }

@@ -127,4 +127,46 @@ $(document).ready(function(){
         document.getElementById("techposts").innerHTML = "<div class=\"nonews\"><p>This wont work on live! :(</p></div>";
     });
 
+     fetch("https://newscatcher.p.rapidapi.com/v1/latest_headlines?topic=entertainment&lang=en&country=GB", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "newscatcher.p.rapidapi.com",
+            "x-rapidapi-key": "e90edb62fbmsh0d0dfd4ff78532ep1cdc91jsn8f9acf1314c5"
+        }
+    })
+    .then(response => response.json())
+    .then(function(data) {
+
+        var entertainment = data.articles;
+        var entertainmentLength = entertainment.length;
+         // console.log(tech);
+            
+        for (var i = 0; i < entertainmentLength; i++) {
+                
+            if ( i === 5 ){
+                break;
+            }
+            else {
+
+                var title = entertainment[i].title;
+                var source = entertainment[i].clean_url;
+                var url = entertainment[i].link;
+                var date = entertainment[i].publishedAt;
+                    
+                var publishedAt = entertainment[i].published_date;
+                var json = JSON.stringify(publishedAt);
+                var dateStr = JSON.parse(json);  
+                var date = new Date(dateStr);
+                var formatDate = date.toDateString();
+
+                document.getElementById("entertainmentposts").innerHTML += "<div class=\"newspost\"><p><a href=\"" + url + "\" target=\"_blank\" rel=\"noopener\"><strong><span id=\"title\">" + title + "</span></strong></a><br><span id=\"source\">" + source + "</span> &#124; <span id=\"date\">" + formatDate + "</span></p></div>";
+            }
+        }
+        $('#entertainment-loader').addClass('hide');
+    })
+    .catch(function(error) {
+        console.log(JSON.stringify(error));
+        document.getElementById("entertainmentposts").innerHTML = "<div class=\"nonews\"><p>This wont work on live! :(</p></div>";
+    });
+
 });
