@@ -50,31 +50,6 @@ $(document).ready(function(){
   		slidesToShow: 1,
   		slidesToScroll: 1,
 	});
-
-	$(document).on('click', '.slides .heading',function(){
-	    if( $(this).hasClass('open') ){
-	      $(this).removeClass('open');
-	      $(this).parent().children('.text').slideUp(200);
-	    } else {
-	      $('.slides .text').slideUp(200);
-	      $('.slides .heading').removeClass('open');
-	      $(this).parent().children('.text').slideDown(200);
-	      $(this).addClass('open');
-    	}
-    	return false;
-  	});
-
-  	$(document).on('click', '.boxes .background',function(){
-  		if( $('.fullpage').hasClass('open') ){
-
-  		} else {
-  			$('.fullpage').addClass('open');
-  		}
-  	});
-
-  	$(document).on('click', '.fullpage .close',function(){
-  		$('.fullpage').removeClass('open');
-  	});
 		
 });
 
