@@ -40,16 +40,16 @@ $(document).ready(function(){
     	});
 
 
-	$('.gallery').slick({
-		dots: true,
-		arrows: false,
-		infinite: true,
-		fade: true,
-		autoplay: true,
-  		autoplaySpeed: 1500,
-  		slidesToShow: 1,
-  		slidesToScroll: 1,
-	});
+	// $('.gallery').slick({
+	// 	dots: true,
+	// 	arrows: false,
+	// 	infinite: true,
+	// 	fade: true,
+	// 	autoplay: true,
+  	// 	autoplaySpeed: 1500,
+  	// 	slidesToShow: 1,
+  	// 	slidesToScroll: 1,
+	// });
 		
 });
 
